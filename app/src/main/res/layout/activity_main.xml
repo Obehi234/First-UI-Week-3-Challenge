@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/goodMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/UI_gap"
+            android:layout_marginTop="@dimen/UI_gap"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/good_morning"
+            android:textColor="#000000"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heartsImg"
+            android:layout_width="@dimen/heart_logo"
+            android:layout_height="@dimen/heart_logo"
+            android:layout_marginStart="@dimen/inline_margin_start"
+            android:contentDescription="@string/hearticon"
+            app:layout_constraintBottom_toBottomOf="@+id/goodMorning"
+            app:layout_constraintStart_toEndOf="@+id/goodMorning"
+            app:layout_constraintTop_toTopOf="@id/goodMorning"
+            app:srcCompat="@drawable/hearts" />
+
+    <ImageView
+        android:id="@+id/navbar"
+        android:layout_width="@dimen/navbar_logo"
+        android:layout_height="@dimen/navbar_logo"
+        android:contentDescription="@string/navbar"
+        app:srcCompat="@drawable/navbar"
+        android:layout_marginEnd="@dimen/UI_gap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodMorning"/>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/searchbar_width"
+        android:layout_marginTop="@dimen/UI_gap"
+        android:layout_marginLeft="@dimen/UI_gap"
+        android:layout_marginRight="@dimen/UI_gap"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodMorning"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scrollview_height"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+      >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/headshot"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/username_top_margin"
+                android:fontFamily="@font/comfortaa"
+                android:text="@string/userName"
+                android:textColor="#000000"
+                android:textSize="@dimen/username_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/location_top_margin"
+                android:fontFamily="@font/roboto"
+                android:text="@string/san_fransisco_ca"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/location_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userName"
+              />
+
+            <Button
+                android:id="@+id/follow"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/UI_gap"
+                android:layout_marginTop="@dimen/UI_gap"
+                android:layout_marginRight="@dimen/UI_gap"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/roboto"
+                android:text="@string/follow_josh"
+                android:textAllCaps="true"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+            <Button
+                android:id="@+id/message"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/UI_gap"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/follow"
+                app:strokeColor="#000000"
+                app:strokeWidth="@dimen/button_stroke_size" />
+
+            <GridLayout
+                android:id="@+id/img_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_margin_top"
+                android:alignmentMode="alignMargins"
+                android:columnCount="@dimen/grid_layout"
+                android:paddingStart="@dimen/grid_padding"
+                android:paddingEnd="@dimen/grid_padding"
+                android:rowCount="@dimen/grid_layout"
+                app:layout_constraintTop_toBottomOf="@id/message">
+
+                <ImageView
+                    android:id="@+id/image_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/architectureImg"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/image_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dogimage"
+                    android:src="@drawable/pic2"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dance_girl"
+                    android:src="@drawable/pic3" />
+
+                <ImageView
+                    android:id="@+id/image_view_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dance_couple"
+                    android:src="@drawable/pic4" />
+
+                <ImageView
+                    android:id="@+id/image_view_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/sun_flowers"
+                    android:src="@drawable/pic5"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/island"
+                    android:src="@drawable/pic6"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/img7"
+                    android:src="@drawable/pic7"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/img8"
+                    android:src="@drawable/pic8" />
+
+                <ImageView
+                    android:id="@+id/image_view_9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image9"
+                    android:src="@drawable/pic9" />
+
+            </GridLayout>
+
+
+            <Button
+                android:id="@+id/seeMore"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/UI_gap"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:backgroundTint="@color/white"
+                android:text="@string/see_more"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_grid"
+                app:strokeColor="#000000"
+                app:strokeWidth="@dimen/button_stroke_size" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
