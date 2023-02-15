@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="UI_gap">20dp</dimen>
-    <dimen name="title_size">20dp</dimen>
+    <dimen name="title_size">20sp</dimen>
     <dimen name="heart_logo">30dp</dimen>
     <dimen name="inline_margin_start">8dp</dimen>
     <dimen name="navbar_logo">30dp</dimen>
@@ -12,20 +12,23 @@
     <dimen name="location_top_margin">10dp</dimen>
     <dimen name="location_text_size">11sp</dimen>
     <dimen name="button_corner_radius">8dp</dimen>
-    <dimen name="button_width">390dp</dimen>
+    <dimen name="button_width">350dp</dimen>
     <dimen name="button_height">66dp</dimen>
     <dimen name="small_text_size">14sp</dimen>
     <dimen name="button_stroke_size">2dp</dimen>
     <dimen name="button_margin_bottom">60dp</dimen>
 
+<!--         Profile Photo                   -->
+    <dimen name="profileImg_size">100dp</dimen>
+    <dimen name="profileImg_top_margin">48dp</dimen>
+
 <!--                                Grid Layout                                 -->
     <dimen name="grid_margin_top">46dp</dimen>
     <dimen name="grid_padding">38dp</dimen>
     <dimen name="grid_layout">3</dimen>
-
-
-
-
+    <dimen name="grid_layout_weight">1</dimen>
+    <dimen name="grid_layout_dimension">0dp</dimen>
+    <dimen name="grid_layout_margin">10dp</dimen>
 
 
 

@@ -18,7 +18,7 @@
             android:layout_marginTop="@dimen/UI_gap"
             android:fontFamily="@font/montserrat"
             android:text="@string/good_morning"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="@dimen/title_size"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +55,8 @@
         android:hint="@string/search"
         android:imeOptions="actionSearch"
         android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#757575"
+        android:background="@color/search_bg"
+        android:textColor="@color/search_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/goodMorning"
@@ -81,14 +81,13 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="48dp"
+                android:layout_width="@dimen/profileImg_size"
+                android:layout_height="@dimen/profileImg_size"
+                android:layout_marginTop="@dimen/profileImg_top_margin"
                 android:src="@drawable/headshot"
                 app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp"
+                app:civ_border_width="@dimen/button_stroke_size"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,7 +98,7 @@
                 android:layout_marginTop="@dimen/username_top_margin"
                 android:fontFamily="@font/comfortaa"
                 android:text="@string/userName"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="@dimen/username_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +155,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/follow"
-                app:strokeColor="#000000"
+                app:strokeColor="@color/black"
                 app:strokeWidth="@dimen/button_stroke_size" />
 
             <GridLayout
@@ -165,32 +164,30 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/grid_margin_top"
                 android:alignmentMode="alignMargins"
-                android:columnCount="@dimen/grid_layout"
+                android:columnCount="3"
                 android:paddingStart="@dimen/grid_padding"
                 android:paddingEnd="@dimen/grid_padding"
-                android:rowCount="@dimen/grid_layout"
+                android:rowCount="3"
                 app:layout_constraintTop_toBottomOf="@id/message">
 
                 <ImageView
                     android:id="@+id/image_view_1"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/architectureImg"
                     android:src="@drawable/pic1" />
 
                 <ImageView
                     android:id="@+id/image_view_2"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_rowWeight="1"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/dogimage"
                     android:src="@drawable/pic2"
@@ -198,33 +195,33 @@
 
                 <ImageView
                     android:id="@+id/image_view_3"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/dance_girl"
                     android:src="@drawable/pic3" />
 
                 <ImageView
                     android:id="@+id/image_view_4"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/dance_couple"
                     android:src="@drawable/pic4" />
 
                 <ImageView
                     android:id="@+id/image_view_5"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/sun_flowers"
                     android:src="@drawable/pic5"
@@ -232,11 +229,11 @@
 
                 <ImageView
                     android:id="@+id/image_view_6"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/island"
                     android:src="@drawable/pic6"
@@ -244,11 +241,11 @@
 
                 <ImageView
                     android:id="@+id/image_view_7"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/img7"
                     android:src="@drawable/pic7"
@@ -256,22 +253,22 @@
 
                 <ImageView
                     android:id="@+id/image_view_8"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/img8"
                     android:src="@drawable/pic8" />
 
                 <ImageView
                     android:id="@+id/image_view_9"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/grid_layout_dimension"
                     android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
+                    android:layout_rowWeight="@dimen/grid_layout_weight"
+                    android:layout_columnWeight="@dimen/grid_layout_weight"
+                    android:layout_margin="@dimen/grid_layout_margin"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/image9"
                     android:src="@drawable/pic9" />
@@ -293,7 +290,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_grid"
-                app:strokeColor="#000000"
+                app:strokeColor="@color/black"
                 app:strokeWidth="@dimen/button_stroke_size" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
